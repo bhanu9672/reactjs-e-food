@@ -30,7 +30,6 @@ const nav__links = [
 	},
 ];
 
-
 const Header = () => {
 	const menuRef = useRef(null);
 	const headerRef = useRef(null);
@@ -104,7 +103,6 @@ const Header = () => {
 										</Link>
 									</>
 							}
-
 						</span>
 						<span className="mobile__menu" onClick={toggleMenu}>
 							<i className="ri-menu-line"></i>
