@@ -161,9 +161,9 @@ const Profile = () => {
                             <ListGroup>
                                 <ListGroupItem
                                     action
-                                    active
                                     tag="button"
                                     onClick={(e) => SetShowSec("Dashboard")}
+                                    className={`${showSec == "Dashboard" && 'active'}`}
                                 >
                                     Dashboard
                                 </ListGroupItem>
@@ -171,6 +171,7 @@ const Profile = () => {
                                     action
                                     tag="button"
                                     onClick={(e) => SetShowSec("Orders")}
+                                    className={`${showSec == "Orders" && 'active'}`}
                                 >
                                     Orders
                                 </ListGroupItem>
@@ -178,6 +179,7 @@ const Profile = () => {
                                     action
                                     tag="button"
                                     onClick={(e) => SetShowSec("Payment Method")}
+                                    className={`${showSec == "Payment Method" && 'active'}`}
                                 >
                                     Payment Method
                                 </ListGroupItem>
