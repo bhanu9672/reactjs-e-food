@@ -53,7 +53,6 @@ const Profile = () => {
         toast.success(`User Log Out Successfully`)
         navigator("/login")
     }
-    console.log("currentUser" + currentUser)
 
     const [addpress, setAddpress] = useState({});
     const fetchAddpress = async () => {
@@ -142,9 +141,6 @@ const Profile = () => {
                 toast.success("Address Updated Succefully.")
             })
     };
-
-    console.log(addpress)
-    console.log(orders)
 
     const filteredOrders = orders.filter(
         (order) => order.orderInfo.user_email == user_email
