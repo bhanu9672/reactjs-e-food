@@ -188,20 +188,6 @@ const Profile = () => {
                                 <ListGroupItem
                                     action
                                     tag="button"
-                                    onClick={(e) => SetShowSec("Address")}
-                                >
-                                    Address
-                                </ListGroupItem>
-                                <ListGroupItem
-                                    action
-                                    tag="button"
-                                    onClick={(e) => SetShowSec("Account Details")}
-                                >
-                                    Account Details
-                                </ListGroupItem>
-                                <ListGroupItem
-                                    action
-                                    tag="button"
                                     onClick={hadleLogOut}
                                 >
                                     Logout
@@ -338,143 +324,10 @@ const Profile = () => {
                                             </Card>
                                         </>
                                     }
-                                    {
-                                        showSec == "Address" &&
-                                        <>
-                                            <Card>
-                                                <CardBody>
-                                                    <CardTitle tag="h3" style={{ color: "red" }}>
-                                                        Shipping Address
-                                                    </CardTitle>
-                                                    <CardText className='my-3'>
-                                                        Info Your Shoping Product For Delivery.
-                                                    </CardText>
-                                                    {
-                                                        addpress.length === 0 ?
-                                                            <>
-                                                                <form className="checkout__form" onSubmit={submitHandler}>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="text"
-                                                                            placeholder="Enter your name"
-                                                                            onChange={(e) => setEnterName(e.target.value)}
-                                                                        />
-                                                                    </div>
-
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="email"
-                                                                            placeholder="Enter your email"
-                                                                            onChange={(e) => setEnterEmail(e.target.value)}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="number"
-                                                                            placeholder="Phone number"
-                                                                            onChange={(e) => setEnterNumber(e.target.value)}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="text"
-                                                                            placeholder="Country"
-                                                                            onChange={(e) => setEnterCountry(e.target.value)}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="text"
-                                                                            placeholder="City"
-                                                                            onChange={(e) => setEnterCity(e.target.value)}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="number"
-                                                                            placeholder="Postal code"
-                                                                            onChange={(e) => setPostalCode(e.target.value)}
-                                                                        />
-                                                                    </div>
-                                                                    <button type="submit" className="addTOCart__btn">
-                                                                        Add Address
-                                                                    </button>
-                                                                </form>
-                                                            </>
-                                                            :
-                                                            <>
-                                                                <form className="checkout__form" onSubmit={hadleEditAddpress}>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="text"
-                                                                            placeholder="Enter your name"
-                                                                            onChange={(e) => setEnterName(e.target.value)}
-                                                                            value={enterName}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="email"
-                                                                            placeholder="Enter your email"
-                                                                            onChange={(e) => setEnterEmail(e.target.value)}
-                                                                            value={enterEmail}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="number"
-                                                                            placeholder="Phone number"
-                                                                            onChange={(e) => setEnterNumber(e.target.value)}
-                                                                            value={enterNumber}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="text"
-                                                                            placeholder="Country"
-                                                                            onChange={(e) => setEnterCountry(e.target.value)}
-                                                                            value={enterCountry}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="text"
-                                                                            placeholder="City"
-                                                                            onChange={(e) => setEnterCity(e.target.value)}
-                                                                            value={enterCity}
-                                                                        />
-                                                                    </div>
-                                                                    <div className="form__group">
-                                                                        <input
-                                                                            type="number"
-                                                                            placeholder="Postal code"
-                                                                            onChange={(e) => setPostalCode(e.target.value)}
-                                                                            value={postalCode}
-                                                                        />
-                                                                    </div>
-                                                                    <button type="submit" className="addTOCart__btn">
-                                                                        Edit Address
-                                                                    </button>
-                                                                </form>
-                                                            </>
-                                                    }
-                                                </CardBody>
-                                            </Card>
-                                        </>
-                                    }
                                 </Col>
                             </Row>
                         </Col>
                     </Row>
-                    {
-                        currentUser &&
-                        <>
-                            <Button onClick={hadleLogOut}>
-                                LogOut
-                            </Button>
-                            <pre> {JSON.stringify(currentUser, null, 2)}</pre>
-                        </>
-                    }
                 </Container>
             </div>
         </Helmet>
