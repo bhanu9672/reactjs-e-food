@@ -14,7 +14,6 @@ import {
 } from "reactstrap";
 import { HiMailOpen,HiPhoneIncoming,HiLocationMarker } from "react-icons/hi";
 
-
 const Contact = () => {
 	return (
 		<>
@@ -69,6 +68,7 @@ const Contact = () => {
 												placeholder="Your Name"
 												type="text"
 												style={{ height: "50px" }}
+												required
 											/>
 										</FormGroup>
 									</Col>
@@ -80,6 +80,7 @@ const Contact = () => {
 												placeholder="Your Email"
 												type="email"
 												style={{ height: "50px" }}
+												required
 											/>
 										</FormGroup>
 									</Col>
@@ -91,8 +92,9 @@ const Contact = () => {
 												id="name"
 												name="phone"
 												placeholder="Your Phone"
-												type="text"
+												type="number"
 												style={{ height: "50px" }}
+												required
 											/>
 										</FormGroup>
 									</Col>
@@ -104,6 +106,7 @@ const Contact = () => {
 												placeholder="Your Subject"
 												type="text"
 												style={{ height: "50px" }}
+												required
 											/>
 										</FormGroup>
 									</Col>
@@ -116,6 +119,7 @@ const Contact = () => {
 											type="textarea"
 											placeholder="Write message :"
 											style={{ height: "200px" }}
+											required
 										/>
 									</Col>
 								</FormGroup>
