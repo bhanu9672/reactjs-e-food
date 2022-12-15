@@ -3,7 +3,7 @@
 
 ## Project Live Demo
 
-https://react-blogs-eight.vercel.app/
+https://reactjs-e-food.vercel.app/home
 
 ### Features:
 
